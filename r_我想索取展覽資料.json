@@ -1,1 +1,1 @@
-[{"type":"text","text":"好的！請直接在此回覆以下資料，我們會盡快與您聯繫：\n1. 公司名稱\n2. 聯絡人姓名\n3. Email 或電話\n4. 感興趣的展覽\n\n我們僅將資料用於回覆您的展覽諮詢。","quickReply":{"items":[{"type":"action","action":{"type":"message","label":"回產業選單","text":"回到產業選單"}}]}}]
+[{"type":"text","text":"請至官網選擇您感興趣的展覽，在展覽頁面點選「下載展會資料」即可索取最新資料：\nhttps://sunriseexpo.com/events/","quickReply":{"items":[{"type":"action","action":{"type":"uri","label":"前往官網展覽","uri":"https://sunriseexpo.com/events/"}},{"type":"action","action":{"type":"message","label":"回產業選單","text":"回到產業選單"}}]}}]
