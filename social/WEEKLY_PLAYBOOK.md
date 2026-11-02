@@ -40,7 +40,7 @@
    - 圖與文字共用同一份 spec，所以**所有要出現在貼文裡的字都寫在 spec 裡**。
 3. **產圖**：`python3 -I social/tools/build_long.py <spec.json> <輸出資料夾>`（需 `pip install --break-system-packages segno`；Playwright 已預裝）。每篇輸出 5 張（封面、3 頁內文、聯絡頁）與 `texts.json`（含 `fb`、`ig` 全文）。
    用 Read 把每篇拼成總覽圖檢查：文字不溢出（內文頁底部要留空，來源小字不被蓋住）、不要在詞中間換行、沒有簡體字、QR code 可掃（`cv2.QRCodeDetector` 應解出 LINE 網址）。
-4. **推圖**：複製到 `social/<週二日期>-market/`，commit、push main（直接推 main，不要開分支）。推完用 curl 確認網址回 200。
+4. **推圖**：複製到 `social/<週二日期>-long/`，commit、push main（直接推 main，不要開分支）。推完用 curl 確認網址回 200。
 5. **建 Metricool 草稿（6 則）**：先用 `getScheduledPosts` 看該週已有哪些貼文，避免重複建。`createScheduledPost`：
    - `date`：`YYYY-MM-DDT08:30:00+08:00`
    - `info`（JSON 字串）：`{"autoPublish":true,"draft":true,"firstCommentText":"","hasNotReadNotes":false,"media":[5 張公開網址],"providers":[{"network":"facebook"|"instagram"}],"publicationDate":{"dateTime":"YYYY-MM-DDT08:30:00","timezone":"Asia/Taipei"},"shortener":false,"text":"texts.json 的 fb 或 ig 全文，不改字", 以及 FB 的 "facebookData":{"type":"POST"} 或 IG 的 "instagramData":{"type":"POST","autoPublish":true,"showReelOnFeed":true,"isAiGenerated":false}}`
