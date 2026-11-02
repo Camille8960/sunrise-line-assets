@@ -38,7 +38,7 @@ body{width:1080px;height:1350px;font-family:'Noto Sans CJK TC',sans-serif;color:
 .cta .d{font-size:36px;color:#B9B4A9;margin-top:14px;line-height:1.5}
 .foot{position:absolute;left:88px;right:88px;bottom:64px;display:flex;justify-content:space-between;
  font-size:28px;letter-spacing:6px;color:#8E897F}
-.src{position:absolute;left:88px;bottom:118px;font-size:26px;color:#6F6B63}
+.src{position:absolute;left:88px;right:88px;bottom:112px;font-size:26px;line-height:1.5;color:#6F6B63}
 """
 def page(inner, idx, total, src=None):
     s = f'<div class="src">{src}</div>' if src else ''
