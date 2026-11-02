@@ -25,7 +25,7 @@ def contact_text(region):
 def post_text(p, ig=False):
     out = [f"【{p['label'].split('｜')[0]}】{p['title']}", "", p["sub"]]
     for pg in p["pages"]:
-        out += ["", f"■ {pg['tag']}｜{pg['heading']}"] + pg["paras"]
+        out += ["", f"■ {pg['heading']}"] + pg["paras"]
     out += ["", contact_text(p["region"]), "", p["src"], "", p["hashtags"]]
     t = "\n".join(out)
     if ig:  # IG 文字不放可點擊連結
